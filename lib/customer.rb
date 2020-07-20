@@ -18,7 +18,7 @@ class Customer
   end
 
   def waiters
-    Meals.map {|meal| meal.waiter}
+    meals.map {|meal| meal.waiter}
   end
 
   def new_meal(waiter, total, tip=0)
