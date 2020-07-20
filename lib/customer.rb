@@ -18,8 +18,7 @@ class Customer
   end
 
   def waiters
-    waiters = Waiter.all.map {|waiter| waiter.meals == self.meals}
-    waiters
+    Meals.map {|meal| meal.waiter}
   end
 
   def new_meal(waiter, total, tip=0)
